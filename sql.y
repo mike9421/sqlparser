@@ -1669,7 +1669,7 @@ col_alias:
 
 from_opt:
   {
-    $$ = TableExprs{&AliasedTableExpr{Expr:TableName{Name: NewTableIdent("dual")}}}
+    $$ = TableExprs{&AliasedTableExpr{Expr:TableName{Name: NewTableIdent("")}}}
   }
 | FROM table_references
   {

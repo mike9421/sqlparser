@@ -635,7 +635,7 @@ func (tkn *Tokenizer) scanIdentifier(firstByte byte, isDbSystemVariable bool) (i
 		return keywordID, lowered
 	}
 	// dual must always be case-insensitive
-	if loweredStr == "dual" {
+	if loweredStr == "" {
 		return ID, lowered
 	}
 	return ID, buffer.Bytes()
